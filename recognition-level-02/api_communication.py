@@ -1,18 +1,18 @@
 import requests
-# from api_secrets import API_KEY_ASSEMBLYAI
-import sys
+from api_secrets import API_KEY_ASSEMBLYAI
 import time
 
-API_KEY_ASSEMLYAI = "secret is deleted"
+
 upload_endpoint = "https://api.assemblyai.com/v2/upload"
 transcript_endpoint = "https://api.assemblyai.com/v2/transcript"  # submitting endpoint
 
-filename = sys.argv[1]
+
 headers = {'authorization': API_KEY_ASSEMBLYAI}
 
 
-def upload():
-    # upload => uploading our file
+# upload => uploading our file
+def upload(filename):
+
     def read_file(filename, chunk_size=5242880):
         with open(filename, 'rb') as _file:
             while True:
@@ -76,19 +76,13 @@ def get_transcription_results_url(audio_url):
 
 
 # save the transcript
-def save_transcript(audio_url):
+def save_transcript(audio_url, filename):
     data, error = get_transcription_results_url(audio_url)
 
     if (data):
         text_file = filename + ".txt"
         with open(text_file, "w") as f:
             f.write(data["text"])
+            print("All done!")
     elif (error):
         print("Error while saving the files => \n", error)
-
-
-# audio_url = upload()
-# save_transcript(audio_url)
-print(API_KEY_ASSEMBLYAI)
-# print("Our data => \n", data)
-# print("Error => \n", error)

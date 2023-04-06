@@ -22,7 +22,7 @@ stream = P.open(
 
 print("Start Recording")
 
-seconds = 5
+seconds = 10
 frames = []
 
 # starting the record
