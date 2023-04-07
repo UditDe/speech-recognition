@@ -1,0 +1,138 @@
+[
+    {
+        "text": "Do you code in Python?",
+        "start": 170,
+        "end": 1578,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.8747449517250061,
+        "speaker": null
+    },
+    {
+        "text": "If you don't do this one thing, it's a dead giveaway that you're a complete noob.",
+        "start": 1674,
+        "end": 6394,
+        "sentiment": "NEGATIVE",
+        "confidence": 0.9233686923980713,
+        "speaker": null
+    },
+    {
+        "text": "It's super common in code to want to iterate over a list of things.",
+        "start": 6442,
+        "end": 10254,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.6096088290214539,
+        "speaker": null
+    },
+    {
+        "text": "And in Python, that's really easy with a for loop.",
+        "start": 10372,
+        "end": 13194,
+        "sentiment": "POSITIVE",
+        "confidence": 0.9230784177780151,
+        "speaker": null
+    },
+    {
+        "text": "But what if when iterating you want to keep the index location of each item, one way is to iterate over a range with the length of your list.",
+        "start": 13242,
+        "end": 21630,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.879932701587677,
+        "speaker": null
+    },
+    {
+        "text": "This works.",
+        "start": 21780,
+        "end": 22510,
+        "sentiment": "POSITIVE",
+        "confidence": 0.8163078427314758,
+        "speaker": null
+    },
+    {
+        "text": "But if you do it, you're a certified noob.",
+        "start": 22580,
+        "end": 25042,
+        "sentiment": "NEGATIVE",
+        "confidence": 0.760641872882843,
+        "speaker": null
+    },
+    {
+        "text": "Another way to do this is to create a counter, which you can increment every time you iterate over an item in your loop.",
+        "start": 25146,
+        "end": 31362,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.8813326358795166,
+        "speaker": null
+    },
+    {
+        "text": "This also works.",
+        "start": 31426,
+        "end": 32518,
+        "sentiment": "POSITIVE",
+        "confidence": 0.7383732199668884,
+        "speaker": null
+    },
+    {
+        "text": "But if you do it, you're a certified double NU.",
+        "start": 32604,
+        "end": 35698,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.7345379590988159,
+        "speaker": null
+    },
+    {
+        "text": "So how do you do it?",
+        "start": 35794,
+        "end": 36934,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.7712607383728027,
+        "speaker": null
+    },
+    {
+        "text": "You Ask.",
+        "start": 36972,
+        "end": 37558,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.7738782167434692,
+        "speaker": null
+    },
+    {
+        "text": "Quit your wanting.",
+        "start": 37644,
+        "end": 38466,
+        "sentiment": "NEGATIVE",
+        "confidence": 0.48514431715011597,
+        "speaker": null
+    },
+    {
+        "text": "I'm about to show you.",
+        "start": 38498,
+        "end": 39766,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.7150850296020508,
+        "speaker": null
+    },
+    {
+        "text": "We can use the built in Python function enumerate.",
+        "start": 39868,
+        "end": 42962,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.6275898218154907,
+        "speaker": null
+    },
+    {
+        "text": "Now, when we loop over our enumerated list, we get both the index and the item in the list.",
+        "start": 43026,
+        "end": 48774,
+        "sentiment": "NEUTRAL",
+        "confidence": 0.8730553388595581,
+        "speaker": null
+    },
+    {
+        "text": "Not only will this make your code cleaner, but it will show that you're a certified Python pro.",
+        "start": 48892,
+        "end": 54060,
+        "sentiment": "POSITIVE",
+        "confidence": 0.9333102107048035,
+        "speaker": null
+    }
+]
