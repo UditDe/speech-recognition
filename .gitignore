@@ -1,2 +1,4 @@
 */api_secrets.py
 *.log
+podcast-summerization-level-04/*.txt
+podcast-summerization-level-04/*.json

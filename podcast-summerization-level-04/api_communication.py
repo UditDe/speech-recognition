@@ -13,6 +13,8 @@ assemblyai_headers = {'authorization': API_KEY_ASSEMBLYAI}
 listennotes_headers = {'X-ListenAPI-Key': API_KEY_LISTENNOTES}
 
 # this function is fetching the data from listennote
+
+
 def get_episode_audio_url(episode_id):
     url = listennotes_episodes_endpoint + "/" + episode_id
     res = requests.request("GET", url, headers=listennotes_headers)
@@ -22,10 +24,11 @@ def get_episode_audio_url(episode_id):
 
     audio_url = data["audio"]
     ep_description = data['description']
+    pd_title = data['podcast']['title']
     ep_thumbnail = data["thumbnail"]
     ep_title = data["title"]
 
-    return audio_url, ep_description, ep_thumbnail, ep_title
+    return audio_url, pd_title, ep_description, ep_thumbnail, ep_title
 
 
 # transcription => submitting our file
@@ -77,7 +80,7 @@ def get_transcription_results_url(audio_url, auto_chapters):
 
 # save the transcript
 def save_transcript(episode_id, auto_chapters=False):
-    audio_url, ep_thumbnail, ep_title, podcast_title = get_episode_audio_url(
+    audio_url, podcast_title, ep_description, ep_thumbnail, ep_title = get_episode_audio_url(
         episode_id)
     data, error = get_transcription_results_url(audio_url, auto_chapters)
 
@@ -95,6 +98,7 @@ def save_transcript(episode_id, auto_chapters=False):
             episode_data["episode_thumbnail"] = ep_thumbnail
             episode_data["episode_title"] = ep_title
             episode_data["podcast_title"] = podcast_title
+            episode_data["description"] = ep_description
 
             json.dump(episode_data, f)
             print("Transcript is saved!!!")
@@ -103,5 +107,4 @@ def save_transcript(episode_id, auto_chapters=False):
 
     elif (error):
         print("Error while saving the files => \n", error)
-
         return False
